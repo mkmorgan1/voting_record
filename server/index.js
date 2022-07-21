@@ -8,3 +8,8 @@ app.use(express.static('public'))
 app.listen(PORT, ()=>{
   console.log(`listening on port: ${PORT}`)
 })
+
+    // "test": "echo \"Error: no test specified\" && exit 1",
+    // "start": "node server",
+    // "build": "webpack build",
+    // "dev": "nodemon server"

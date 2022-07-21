@@ -3,5 +3,6 @@ build
 npm-debug.log
 .env
 .DS_Store
+.next
 package-lock.json
 public/bundle.js*
