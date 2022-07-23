@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function HomePage({pageProps}) {
+function HomePage({ pageProps }) {
   return (
     <>
       <div>Home page: Welcome to Next.js!</div>
     </>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

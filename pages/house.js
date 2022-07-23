@@ -1,10 +1,20 @@
-import DropDown from "./Components/DropDown"
+import AllBillsDropDown from "./Components/AllBillsDropDown";
 
 export default function House() {
   return (
     <>
-      <DropDown title={'Passed Bills'} body={<h1>Bills that have been passed</h1>}/>
-      <DropDown title={'Rejected Bills'} body={<h1>Bills that have been rejected</h1>}/>
+      <AllBillsDropDown
+        congress={"house"}
+        status={"passed"}
+        title={"Passed Bills"}
+        body={<h1>Bills that have been passed</h1>}
+      />
+      <AllBillsDropDown
+        congress={"house"}
+        status={"vetoed"}
+        title={"Rejected Bills"}
+        body={<h1>Bills that have been rejected</h1>}
+      />
     </>
-  )
+  );
 }
