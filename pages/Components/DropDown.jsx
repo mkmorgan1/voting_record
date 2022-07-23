@@ -11,6 +11,7 @@ export default function DropDown({ id, title, body }) {
       >
         {title}
       </h6>
+      <hr />
       <div className="collapse" id={reference}>
         <div className="card card-body">{body}</div>
       </div>
