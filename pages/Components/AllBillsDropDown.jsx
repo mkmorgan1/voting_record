@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { dumbyData, API_KEY } from "../../data/data.js";
+import DropDown from "./DropDown.jsx";
 
 export default function AllBillsDropDown({ congress, status, title, body }) {
   const [bills, setBills] = useState([dumbyData]);
@@ -45,8 +46,11 @@ export default function AllBillsDropDown({ congress, status, title, body }) {
               <div key={bill.bill_id}>
                 <h5>{bill.short_title}</h5>
                 <br></br>
-                <h6>Summary</h6>
-                <q>{bill.summary}</q>
+                <DropDown
+                  id={bill.bill_id}
+                  title={"Summary"}
+                  body={bill.summary}
+                />
               </div>
             );
           })}
