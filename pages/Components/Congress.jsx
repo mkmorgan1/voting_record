@@ -8,13 +8,13 @@ export default function Congress({ congress }) {
           congress={congress}
           status={"passed"}
           title={"Passed Bills"}
-          body={<h1>Bills that have been passed</h1>}
+          titleId={`${congress}-passed`}
         />
         <AllBillsDropDown
           congress={congress}
           status={"vetoed"}
-          title={"Rejected Bills"}
-          body={<h1>Bills that have been rejected</h1>}
+          title={"Vetoed Bills"}
+          titleId={`${congress}-vetoed`}
         />
       </div>
     </>

@@ -1,18 +1,16 @@
 export default function DropDown({ id, title, body }) {
-  const reference = id + title;
   return (
     <>
-      <h6
+      <div
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target={`#${reference}`}
+        data-bs-target={`#${id}`}
         aria-expanded="false"
-        aria-controls={reference}
+        aria-controls={id}
       >
         {title}
-      </h6>
-      <hr />
-      <div className="collapse" id={reference}>
+      </div>
+      <div className="collapse" id={id}>
         <div className="card card-body">{body}</div>
       </div>
     </>
