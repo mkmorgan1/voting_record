@@ -28,9 +28,9 @@ export default function AllBillsDropDown({ congress, status, title, body }) {
   const titleString = title.split(" ").join("");
   return (
     <>
-      <div>
-        <button
-          className="btn btn-primary"
+      <div className="card">
+        <h3
+          className="card-header"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target={`#${titleString}`}
@@ -38,7 +38,7 @@ export default function AllBillsDropDown({ congress, status, title, body }) {
           aria-controls={titleString}
         >
           {title}
-        </button>
+        </h3>
         <div className="collapse" id={titleString}>
           <div className="card card-body">
             {body}
