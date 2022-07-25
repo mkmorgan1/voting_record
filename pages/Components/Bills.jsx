@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import DropDown from "./DropDown.jsx";
+import BillVotes from "./BillVotes.jsx";
+import TitleValueTag from "./TitleValueTag.jsx";
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -31,6 +33,7 @@ function BillDropDown({ bill }) {
     <>
       <BillStatus bill={bill} />
       <BillSummary bill={bill} />
+      <BillVotes id={bill.bill_id+"vote"} vote={bill.vote}/>
       <BillLinks bill={bill} />
     </>
   );
@@ -99,22 +102,13 @@ function BillLinks({ bill }) {
 }
 
 function MakeLink({ name, link }) {
-  return link ? (
-    <a href={link} target="_blank">
-      {name}
-    </a>
-  ) : (
-    <></>
-  );
-}
-
-function TitleValueTag({ title, value }) {
-  return (
-    <>
-      <h6>
-        <b>{title}: </b>
-        {value}
-      </h6>
-    </>
-  );
+  if (link) {
+    return (
+      <a href={link} target="_blank">
+        {name}
+      </a>
+    );
+  } else {
+    return <></>;
+  }
 }
